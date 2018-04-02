@@ -1,0 +1,16 @@
+[
+{
+  "modid": "trashmod",
+  "name": "Trash Mod",
+  "description": "Mod that adds trash to minecraft!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Plajdo"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
