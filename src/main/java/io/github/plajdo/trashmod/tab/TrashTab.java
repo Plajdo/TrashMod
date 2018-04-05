@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 
 public class TrashTab extends CreativeTabs{
 
-	public TrashTab(){
-		super("Trash mod");
+	public TrashTab(String name){
+		super(name);
 	}
 
 	@Override

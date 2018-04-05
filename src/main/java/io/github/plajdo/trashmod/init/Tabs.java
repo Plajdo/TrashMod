@@ -5,6 +5,6 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class Tabs{
 	
-	public static CreativeTabs trashTab = new TrashTab();
+	public static CreativeTabs trashTab = new TrashTab("trashTab");
 	
 }

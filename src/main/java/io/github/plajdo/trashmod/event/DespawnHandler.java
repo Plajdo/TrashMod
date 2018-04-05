@@ -10,7 +10,12 @@ public class DespawnHandler{
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public void onDespawn(ItemExpireEvent event){
 		if(!event.entityItem.worldObj.isRemote){
-			event.entity.worldObj.setBlock((int)event.entityItem.posX, (int)event.entityItem.posY, (int)event.entityItem.posZ, Blocks.trashLayer);
+			if(event.entityItem.worldObj.getBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ)) == Blocks.trashLayer){
+				event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), Blocks.trashLayer, event.entityItem.worldObj.getBlockMetadata((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ)) + 1, 2);
+			}else{
+				event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), Blocks.trashLayer);
+			}
+			
 		}
 		
 	}
