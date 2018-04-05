@@ -1,18 +1,21 @@
 package io.github.plajdo.trashmod.blocks;
 
+import java.util.ArrayList;
+
 import io.github.plajdo.trashmod.TrashConst;
 import io.github.plajdo.trashmod.init.Blocks;
 import io.github.plajdo.trashmod.init.Tabs;
 import net.minecraft.block.BlockSnow;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class TrashLayer extends BlockSnow{
 	
 	public TrashLayer(String name){
 		this.setCreativeTab(Tabs.trashTab);
-		this.setHardness(10F);
-		this.setResistance(5F);
+		this.setHardness(0.2F);
+		this.setResistance(0.1F);
 		this.setBlockName(name);
 		this.setBlockTextureName(TrashConst.MODID + ":" + name);
 		
@@ -36,6 +39,24 @@ public class TrashLayer extends BlockSnow{
 			
 		}
 		return true;
+		
+	}
+	
+	@Override
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();	//TODO: Why does this not work?
+		drops.add(new ItemStack(Blocks.trashLayer, metadata));		//TODO: Drop some noice trash from my mod
+		
+		return drops;
+	}
+	
+	@Override
+	public String getHarvestTool(int metadata){
+		if(metadata < 3){	//TODO: How this works?
+			return null;
+		}else{
+			return "net.minecraft.init.Items.stone_pickaxe";
+		}
 		
 	}
 
