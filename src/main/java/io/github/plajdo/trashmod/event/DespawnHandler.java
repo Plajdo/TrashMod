@@ -17,6 +17,12 @@ public class DespawnHandler{
 				if(event.entityItem.worldObj.getBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ)) == BlocksModded.trashLayer){
 					event.entityItem.worldObj.removeTileEntity((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ));
 					event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), BlocksModded.trashLayer2);
+				}else if(event.entityItem.worldObj.getBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ)) == BlocksModded.trashLayer2){
+					event.entityItem.worldObj.removeTileEntity((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ));
+					event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), BlocksModded.trashLayer3);
+				}else if(event.entityItem.worldObj.getBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ)) == BlocksModded.trashLayer3){
+					event.entityItem.worldObj.removeTileEntity((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ));
+					event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), BlocksModded.trashLayer4);
 				}else{
 					event.entityItem.worldObj.setBlock((int)Math.floor(event.entityItem.posX), (int)Math.floor(event.entityItem.posY), (int)Math.floor(event.entityItem.posZ), BlocksModded.trashLayer);
 				}

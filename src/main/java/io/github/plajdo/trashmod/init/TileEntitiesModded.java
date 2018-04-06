@@ -5,9 +5,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer2;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer3;
+import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer4;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer2;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer3;
+import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer4;
 
 public class TileEntitiesModded{
 	
@@ -20,6 +22,9 @@ public class TileEntitiesModded{
 		
 		GameRegistry.registerTileEntity(TileEntityTrashLayer3.class, "tileTrashLayer3");
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrashLayer3.class, new RenderTileEntityTrashLayer3());
+		
+		GameRegistry.registerTileEntity(TileEntityTrashLayer4.class, "tileTrashLayer4");
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrashLayer4.class, new RenderTileEntityTrashLayer4());
 		
 	}
 	
