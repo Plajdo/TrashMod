@@ -14,10 +14,11 @@ public class TrashBlock extends Block{
 	public TrashBlock(String name){
 		super(Material.cloth);
 		this.setCreativeTab(TabsModded.trashTab);
-		this.setHardness(2F);
-		this.setResistance(1F);
+		this.setHardness(0.2F);
+		this.setResistance(0.1F);
 		this.setBlockName(name);
 		this.setBlockTextureName(TrashConst.MODID + ":" + name);
+		//TODO: Set step sounds
 		
 	}
 	

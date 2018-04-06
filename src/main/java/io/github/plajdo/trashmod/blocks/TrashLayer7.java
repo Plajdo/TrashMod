@@ -3,16 +3,16 @@ package io.github.plajdo.trashmod.blocks;
 import java.util.Random;
 
 import io.github.plajdo.trashmod.init.BlocksModded;
-import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer6;
+import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer7;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class TrashLayer6 extends TrashLayer{
+public class TrashLayer7 extends TrashLayer{
 	
-	public TrashLayer6(String name) {
+	public TrashLayer7(String name) {
 		super(name);
-		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.75F, 1.0F);
+		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.875F, 1.0F);
 	}
 	
 	@Override
@@ -22,7 +22,7 @@ public class TrashLayer6 extends TrashLayer{
 				if(p_149727_5.getEquipmentInSlot(0).getItem() == BlocksModded.trashLayer.getItem(w, x, y, z)){
 					p_149727_5.inventory.consumeInventoryItem(BlocksModded.trashLayer.getItem(w, x, y, z));
 					w.removeTileEntity(x, y, z);
-					w.setBlock(x, y, z, BlocksModded.trashLayer7);
+					w.setBlock(x, y, z, BlocksModded.trashBlock);
 					
 				}
 				
@@ -35,12 +35,12 @@ public class TrashLayer6 extends TrashLayer{
 	
 	@Override
 	public int quantityDropped(int meta, int fortune, Random random){
-		return 6;
+		return 7;
 	}
 	
 	@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-		return new TileEntityTrashLayer6();
+		return new TileEntityTrashLayer7();
 	}
 	
 }

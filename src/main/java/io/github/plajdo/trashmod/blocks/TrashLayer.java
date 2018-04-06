@@ -17,13 +17,14 @@ import net.minecraft.world.World;
 public class TrashLayer extends BlockContainer{
 	
 	public TrashLayer(String name){
-		super(Material.ground);
+		super(Material.cloth);
 		this.setCreativeTab(TabsModded.trashTab);
 		this.setHardness(0.2F);
 		this.setResistance(0.1F);
 		this.setBlockName(name);
 		this.setBlockTextureName(TrashConst.MODID + ":" + name);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+		//TODO: Set step sounds as well
 		
 	}
 
