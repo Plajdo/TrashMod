@@ -1,20 +1,19 @@
 package io.github.plajdo.trashmod.blocks;
 
-import java.util.ArrayList;
+import java.util.Random;
 
 import io.github.plajdo.trashmod.TrashConst;
-import io.github.plajdo.trashmod.init.Tabs;
+import io.github.plajdo.trashmod.init.ItemsModded;
+import io.github.plajdo.trashmod.init.TabsModded;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.item.Item;
 
 public class TrashBlock extends Block{
 
 	public TrashBlock(String name){
 		super(Material.cloth);
-		this.setCreativeTab(Tabs.trashTab);
+		this.setCreativeTab(TabsModded.trashTab);
 		this.setHardness(2F);
 		this.setResistance(1F);
 		this.setBlockName(name);
@@ -23,15 +22,13 @@ public class TrashBlock extends Block{
 	}
 	
 	@Override
-	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune){
-		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-		drops.add(new ItemStack(Blocks.cobblestone, 8));	//TODO: Drop custom trash item when it is done
-		
-		return drops;
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_){
+		return ItemsModded.trashItem;
 	}
 	
-	/*
-	 * TODO: Set proper mining tool here (pickaxe ofc)
-	 */
+	@Override
+	public int quantityDropped(Random p_149745_1_) {
+		return 8;
+	}
 	
 }
