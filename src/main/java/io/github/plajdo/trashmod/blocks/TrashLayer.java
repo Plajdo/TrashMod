@@ -52,7 +52,7 @@ public class TrashLayer extends BlockContainer{
 	
 	@Override
 	public int quantityDropped(int meta, int fortune, Random random){
-		return meta + 1;
+		return 1;
 	}
 	
 	@Override
