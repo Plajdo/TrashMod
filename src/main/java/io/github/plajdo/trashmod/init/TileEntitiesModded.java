@@ -7,11 +7,13 @@ import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer2;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer3;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer4;
 import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer5;
+import io.github.plajdo.trashmod.tileEntity.RenderTileEntityTrashLayer6;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer2;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer3;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer4;
 import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer5;
+import io.github.plajdo.trashmod.tileEntity.TileEntityTrashLayer6;
 
 public class TileEntitiesModded{
 	
@@ -30,6 +32,9 @@ public class TileEntitiesModded{
 		
 		GameRegistry.registerTileEntity(TileEntityTrashLayer5.class, "tileTrashLayer5");
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrashLayer5.class, new RenderTileEntityTrashLayer5());
+		
+		GameRegistry.registerTileEntity(TileEntityTrashLayer6.class, "tileTrashLayer6");
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrashLayer6.class, new RenderTileEntityTrashLayer6());
 		
 	}
 	
