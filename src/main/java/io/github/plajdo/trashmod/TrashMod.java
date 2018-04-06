@@ -30,6 +30,7 @@ public class TrashMod{
 	public void init(FMLInitializationEvent event){
 		MinecraftForge.EVENT_BUS.register(new DespawnHandler());
 		Recipes.registerShaped();
+		Recipes.registerShapeless();
 	}
 	
 	@EventHandler
