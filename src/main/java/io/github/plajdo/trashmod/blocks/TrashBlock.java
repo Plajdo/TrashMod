@@ -18,7 +18,7 @@ public class TrashBlock extends Block{
 		this.setResistance(0.1F);
 		this.setBlockName(name);
 		this.setBlockTextureName(TrashConst.MODID + ":" + name);
-		//TODO: Set step sounds
+		this.setStepSound(soundTypeGravel);
 		
 	}
 	

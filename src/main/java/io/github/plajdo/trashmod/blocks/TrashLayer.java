@@ -24,7 +24,7 @@ public class TrashLayer extends BlockContainer{
 		this.setBlockName(name);
 		this.setBlockTextureName(TrashConst.MODID + ":" + name);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
-		//TODO: Set step sounds as well
+		this.setStepSound(soundTypeGravel);
 		
 	}
 
