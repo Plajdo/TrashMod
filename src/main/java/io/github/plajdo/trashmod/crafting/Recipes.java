@@ -33,7 +33,8 @@ public class Recipes{
 	}
 	
 	public static void registerSmelting(){
-		
+		GameRegistry.addSmelting(new ItemStack(ItemsModded.trashItem), new ItemStack(ItemsModded.ash), 0.0F);
+		GameRegistry.addSmelting(new ItemStack(BlocksModded.trashBlock), new ItemStack(ItemsModded.ash, 8), 0.0F);
 	}
 	
 }

@@ -31,6 +31,7 @@ public class TrashMod{
 		MinecraftForge.EVENT_BUS.register(new DespawnHandler());
 		Recipes.registerShaped();
 		Recipes.registerShapeless();
+		Recipes.registerSmelting();
 	}
 	
 	@EventHandler
